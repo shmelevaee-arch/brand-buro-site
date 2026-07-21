@@ -330,8 +330,13 @@ a {
   margin-bottom: 44px;
 }
 
-.benefits, .testimonials {
+.benefits {
   padding: 88px 0;
+}
+
+.testimonials {
+  padding: 88px 0;
+  background: var(--color-bg-alt);
 }
 
 .process {
@@ -754,6 +759,57 @@ a {
   border-bottom: 1px solid currentColor;
 }
 
+/* ===== Отрасли ===== */
+.industries {
+  padding: 88px 0;
+  background: var(--color-bg);
+}
+
+.industries__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.industry-chip {
+  display: inline-block;
+  padding: 12px 22px;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: var(--color-surface);
+  font-size: 15px;
+  color: var(--color-text);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.industry-chip:hover {
+  border-color: var(--color-burgundy);
+  background: var(--color-bg-alt);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(90, 16, 36, 0.08);
+}
+
+.industries__note {
+  margin-top: 36px;
+  padding: 24px 28px;
+  border-radius: var(--radius);
+  border-left: 3px solid var(--color-burgundy);
+  background: var(--color-bg-alt);
+}
+
+.industries__note p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+  max-width: 70ch;
+}
+
+.industries__note strong {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
 /* ===== Отзывы ===== */
 .testimonials__grid {
   display: grid;
@@ -764,7 +820,7 @@ a {
 .testimonial-card {
   padding: 28px;
   border-radius: var(--radius);
-  background: var(--color-bg-alt);
+  background: var(--color-surface);
 }
 
 .testimonial-card p {
@@ -919,7 +975,7 @@ a {
     padding: 64px 0 68px;
   }
 
-  .benefits, .process, .testimonials, .pricing, .cases {
+  .benefits, .process, .testimonials, .pricing, .cases, .industries {
     padding: 56px 0;
   }
 
