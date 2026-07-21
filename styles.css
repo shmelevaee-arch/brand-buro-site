@@ -351,6 +351,12 @@ a {
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
   background: var(--color-surface);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(90, 16, 36, 0.1);
 }
 
 .benefit-card h3 {
@@ -462,6 +468,16 @@ a {
   border: 1px solid var(--color-border);
   border-radius: var(--radius);
   background: var(--color-surface);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.pricing-card:not(.pricing-card--featured):hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(90, 16, 36, 0.1);
+}
+
+.pricing-card--featured:hover {
+  box-shadow: 0 26px 46px rgba(90, 16, 36, 0.24);
 }
 
 .pricing-card__title {
@@ -520,6 +536,23 @@ a {
   letter-spacing: 0.05em;
   padding: 5px 12px;
   border-radius: 999px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
+  animation: badgePulse 2.6s ease-in-out infinite;
+}
+
+@keyframes badgePulse {
+  0%, 100% {
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22), 0 0 0 0 rgba(255, 255, 255, 0.5);
+  }
+  50% {
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22), 0 0 0 7px rgba(255, 255, 255, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pricing-card__badge {
+    animation: none;
+  }
 }
 
 .pricing-card--featured {
@@ -625,6 +658,12 @@ a {
   border-radius: var(--radius);
   overflow: hidden;
   background: var(--color-surface);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.case-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(90, 16, 36, 0.1);
 }
 
 .case-card__image {
